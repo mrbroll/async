@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  async0:
+    container_name: async0
+    image: async:latest
+    build:
+      context: ./
+    network_mode: "host"
+    environment:
+      - HOST=localhost
+      - PORT=3000
+
+  async1:
+    container_name: async1
+    image: async:latest
+    build:
+      context: ./
+    network_mode: "host"
+    environment:
+      - HOST=localhost
+      - PORT=3001
+
+  async2:
+    container_name: async2
+    image: async:latest
+    build:
+      context: ./
+    network_mode: "host"
+    environment:
+      - HOST=localhost
+      - PORT=3002
